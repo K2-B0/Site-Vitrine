@@ -43,19 +43,19 @@ header nav ul{
 ul li{
     margin-top: 150px;
     margin-right: 20px;
-    padding: 5px 5px;
+    padding: 10px 15px;
     border-radius: 10px;
     font-family: "Kanit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100px;
     font-style: normal;
     text-align: center;
-    background-color: rgb(47, 47, 48);
+    background-color: rgb(47, 47, 48,);
+    color: #f7fafc; /* Texte clair */
     transition: background-color 0.5s ease, transform 0.3s ease;
 }
 
   ul li:hover {
-    background-color: #ef4444;
     transform: scale(1.1);
   }
 
@@ -65,7 +65,7 @@ ul li{
   left: -400px; /* Masqué par défaut */
   width: 160px; /* Largeur différente */
   height: 100%;
-  background-color: #1f29372c;
+  background: rgba(47, 47, 48, 0.9);
   color: white;
   transition: left 0.3s ease; /* Animation douce */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -198,6 +198,25 @@ button:hover {
 
 .menu.hidden {
     display: none;
+}
+
+.hidden {
+  opacity: 0; /* Cache l'élément */
+  transform: translateX(-20px); /* Déplacer légèrement le bouton à gauche pour un effet de disparition */
+  pointer-events: none;
+}
+
+#openMenu_2 {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+#openMenu_2:hover + .menu_2 {
+  left: 0; /* Le menu s'ouvre lorsqu'on survole le bouton */
+}
+
+#openMenu_2:hover {
+  transform: scale(1.1); /* Effet de mise en valeur sur le survol */
 }
 
 #infoForm {

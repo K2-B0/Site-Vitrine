@@ -63,17 +63,49 @@ submitInfoButton.addEventListener("click", () => {
     }
 });
 
-    // MENU
+    // MENU GAUCHE
 
-// Ouvrir le second menu
-document.getElementById("openMenu_2").addEventListener("click", function () {
-    console.log("Bouton OpenMenu_2 cliqué");
-    document.getElementById("sideMenu_2").classList.add("open");
+// Cibler les éléments
+const openMenuBtn = document.getElementById("openMenu_2");  // Bouton pour ouvrir le menu
+const sideMenu = document.getElementById("sideMenu_2");  // Menu de gauche
+const closeMenuBtn = document.getElementById("closeMenu_2");  // Bouton pour fermer le menu
+
+// Fonction pour ouvrir le menu
+function openMenu() {
+    sideMenu.classList.add("open"); // Ajouter la classe "open" pour afficher le menu
+    openMenuBtn.classList.add("hidden"); // Cacher le bouton lorsque le menu est ouvert
+}
+
+// Fonction pour fermer le menu
+function closeMenu() {
+    sideMenu.classList.remove("open"); // Retirer la classe "open" pour masquer le menu
+    openMenuBtn.classList.remove("hidden"); // Afficher à nouveau le bouton
+}
+
+// Ajouter un événement de clic sur le bouton pour ouvrir le menu
+openMenuBtn.addEventListener("click", openMenu);
+
+// Ajouter un événement de clic sur le bouton pour fermer le menu
+if (closeMenuBtn) {
+    closeMenuBtn.addEventListener("click", closeMenu);
+}
+
+// Fermer le menu lorsqu'on clique en dehors (dans le body)
+document.addEventListener("click", function(event) {
+    // Si le clic est en dehors du menu et du bouton pour l'ouvrir
+    if (!sideMenu.contains(event.target) && !openMenuBtn.contains(event.target)) {
+        closeMenu();
+    }
 });
 
-// Fermer le second menu
-document.getElementById("closeMenu_2").addEventListener("click", function () {
-    console.log("Bouton CloseMenu_2 cliqué");
-    document.getElementById("sideMenu_2").classList.remove("open");
+document.getElementById('openMenu_2').addEventListener('mouseover', function() {
+    document.getElementById('sideMenu_2').classList.add('open'); // Ouvre le menu au survol
 });
+
+document.getElementById('sideMenu_2').addEventListener('mouseleave', function() {
+    document.getElementById('sideMenu_2').classList.remove('open'); // Ferme le menu lorsque le curseur quitte le menu
+});
+
+
+
 
