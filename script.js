@@ -4,17 +4,19 @@ const closeMenuButton = document.getElementById("closeMenu");
 const menu = document.getElementById("menu");
 const submitInfoButton = document.getElementById("submitInfo");
 const content = document.getElementById("content");
+const body = document.querySelector("main_content");
 
 // Ouvrir le menu
 openMenuButton.addEventListener("click", () => {
     menu.classList.remove("hidden");
-    content.classList.add("blurred"); // Ajoute le flou au contenu
+    main_content.classList.add("blurred"); // Ajoute le flou au contenu
 });
 
 // Fermer le menu
 closeMenuButton.addEventListener("click", () => {
     menu.classList.add("hidden");
     content.classList.remove("blurred"); // Retire le flou
+    main_content.classList.remove("blurred");
 });
 
 // Soumettre les informations
@@ -33,12 +35,14 @@ submitInfoButton.addEventListener("click", () => {
             icon: 'success',
             confirmButtonText: 'OK',
             confirmButtonColor: '#28a745',
-            background: '#fefefe',
-            color: '#000',
+            background: '#1f2937',
+            color: '#fff',
         }).then(() => {
             // Retirer le flou et fermer le menu après avoir cliqué sur OK
             menu.classList.add("hidden");
             content.classList.remove("blurred");
+            menu.classList.remove("open"); // Ferme le menu
+            main_content.classList.remove("blurred"); // Retire le flou du body
         });
 
         // Fermer le menu après l'envoi
@@ -46,9 +50,13 @@ submitInfoButton.addEventListener("click", () => {
     } else {
         // Alerte d'erreur si les champs ne sont pas remplis
         Swal.fire({
-            title: 'Erreur',
-            text: 'Veuillez remplir tous les champs.',
+            title: `<p class="good">Oups, ${name} !</p>`,
+            html: `
+                <p class="good">Tu dois remplir toutes les informations.</p>
+            `,
             icon: 'error',
+            background: '#1f2937',
+            color: '#fff',
             confirmButtonText: 'OK',
             confirmButtonColor: '#dc3545',
         });

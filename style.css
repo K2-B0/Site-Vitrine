@@ -184,12 +184,13 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: #1f2937;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -197,6 +198,17 @@ button:hover {
 
 .menu.hidden {
     display: none;
+}
+
+#infoForm {
+  color: white;
+}
+
+.info_request {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-left: 60px;
 }
 
 .blurred {
@@ -210,11 +222,12 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 350px;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: center;
 }
 
 #submitInfo {

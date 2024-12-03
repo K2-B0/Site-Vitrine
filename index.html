@@ -24,10 +24,11 @@
         <header>
             <nav class="navbar">
                 <ul>
-                    <div id="content">
+                    <div>
+                        <div id="content">
                         <button class="login" id="openMenu_2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-                        <div id="sideMenu_2" class="menu_2">
-                            <button id="closeMenu_2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+                            <div id="sideMenu_2" class="menu_2">
+                                <button id="closeMenu_2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
                             <nav>
                                 <ul class="icon_menu">
                                     <li class="home_menu"><a href="#">Accueil</a></li>
@@ -36,6 +37,7 @@
                                     <li class="contact_menu"><a href="#">Contact</a></li>
                                 </ul>
                             </nav>
+                            </div>
                         </div>
                     </div>
                     <button class="basket" id="account"><a href="https://google.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg></a></button>
@@ -45,9 +47,11 @@
         </header>
         <main>
             <div id="content">
-                <h1><span class="title_1">Bienvue sur mon site</span><br>découvre nos offres dès maintenant et inscrit toi a notre Newsletter</h1>
-                <div>
+                <div id="main_content">
+                    <h1><span class="title_1">Bienvue sur mon site</span><br>découvre nos offres dès maintenant et inscrit toi a notre Newsletter</h1>
+                        <div>
                     <p class="cta-text">Grâce à nos solutions adaptées, plus de 8 clients sur 10 sont satisfaits et prêts à nous recommander. <br>Alors, qu’est-ce que tu attends pour nous contacter et nous rejoindre ?</p>
+                        </div>
                 </div>
             </div>
             <div class="container">
@@ -55,7 +59,7 @@
                     <button id="openMenu">Saisir vos informations</button>
                 </div>
                 <div id="menu" class="menu hidden">
-                    <h2>Entrez vos informations</h2>
+                    <h2 class="info_request">Entrez vos informations</h2>
                     <form id="infoForm">
                         <label for="name" class="name">Prénom :</label>
                         <input type="text" id="name" name="name" placeholder="Entrez votre Prénom">
