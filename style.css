@@ -41,7 +41,8 @@ header nav ul{
 
   /*MENU*/
 ul li{
-    margin-top: 150px;
+    margin-top: 30px;
+    margin-bottom: 180px;
     margin-right: 20px;
     padding: 10px 15px;
     border-radius: 10px;
@@ -63,8 +64,9 @@ ul li{
   position: fixed;
   top: 0;
   left: -400px; /* Masqué par défaut */
+  margin-top: 120px;
   width: 160px; /* Largeur différente */
-  height: 100%;
+  height: 800px;
   background: rgba(47, 47, 48, 0.9);
   color: white;
   transition: left 0.3s ease; /* Animation douce */
@@ -72,6 +74,8 @@ ul li{
   z-index: 1000;
   padding-right: 20px;
   opacity: 1;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .menu_2.open {
@@ -208,11 +212,6 @@ button:hover {
 
 #openMenu_2 {
   transition: opacity 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-}
-
-#openMenu_2:hover + .menu_2 {
-  left: 0; /* Le menu s'ouvre lorsqu'on survole le bouton */
 }
 
 #openMenu_2:hover {

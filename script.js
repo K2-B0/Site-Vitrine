@@ -98,14 +98,6 @@ document.addEventListener("click", function(event) {
     }
 });
 
-document.getElementById('openMenu_2').addEventListener('mouseover', function() {
-    document.getElementById('sideMenu_2').classList.add('open'); // Ouvre le menu au survol
-});
-
-document.getElementById('sideMenu_2').addEventListener('mouseleave', function() {
-    document.getElementById('sideMenu_2').classList.remove('open'); // Ferme le menu lorsque le curseur quitte le menu
-});
-
 
 
 
