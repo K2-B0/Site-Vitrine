@@ -1,3 +1,29 @@
+/*-----META-----*/
+
+    /*-----SCROLLING BAR-----*/
+
+    /* Pour les navigateurs basés sur WebKit (Chrome, Edge, Safari) */
+    ::-webkit-scrollbar {
+      width: 8px; /* Largeur de la barre */
+      height: 8px; /* Hauteur de la barre horizontale */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ef4444; /* Couleur de la barre */
+      border-radius: 10px; /* Arrondi */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d92626; /* Couleur au survol */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1f2937; /* Arrière-plan de la zone de défilement */
+      border-radius: 10px;
+    }
+
+    /*-----SCROLLING BAR-----*/
+
 body {
     margin: 0; padding:0;
     background-color: rgb(17 24 39 );
@@ -20,6 +46,26 @@ header nav ul{
     margin: 0 auto;  
 }
 
+/*-----META-----*/
+
+/*-----TITLE HEADER-----*/
+
+.main-title {
+  margin-top: 0;
+  padding-top: 30px;
+  font-size: 40px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-weight: bold;
+  color: #ef4444;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/*-----TITLE HEADER-----*/
+
+/*-----NAV BUTTON HEADER-----*/
+
   .basket {
     height: 40px;
     width: 45px;
@@ -39,7 +85,28 @@ header nav ul{
     background-color: #ef4444;
   }
 
-  /*MENU*/
+  .login {
+    height: 40px;
+    width: 45px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(47, 47, 48,);
+    float: left;
+    margin-top: 30px;
+    margin-left: 0px;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 8px;
+  }
+
+  .login:hover {
+    background-color: #ef4444;
+    }
+
+/*-----NAV BUTTON HEADER-----*/
+
+/*-----SIDE MENU-----*/
+
 ul li{
     margin-top: 30px;
     margin-bottom: 180px;
@@ -99,26 +166,18 @@ ul li{
   color: white;
   font-size: 18px;
 }
- /*MENU*/
 
+#openMenu_2 {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-  .login {
-    height: 40px;
-    width: 45px;
-    border-radius: 10px;
-    border-style: none;
-    background-color: rgb(47, 47, 48,);
-    float: left;
-    margin-top: 30px;
-    margin-left: 0px;
-    text-decoration: none;
-    padding-left: 10px;
-    padding-top: 8px;
-  }
+#openMenu_2:hover {
+  transform: scale(1.1); /* Effet de mise en valeur sur le survol */
+}
 
-  .login:hover {
-    background-color: #ef4444;
-  }
+/*-----SIDE MENU-----*/
+
+/*-----MAIN PAGE-----*/
 
   h1 {
     font-size: 28px;
@@ -210,13 +269,10 @@ button:hover {
   pointer-events: none;
 }
 
-#openMenu_2 {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+/*-----MAIN PAGE-----*/
 
-#openMenu_2:hover {
-  transform: scale(1.1); /* Effet de mise en valeur sur le survol */
-}
+/*-----MENU INFORMATION-----*/
+
 
 #infoForm {
   color: white;
@@ -277,14 +333,17 @@ h2 {
   margin-left: 12px;
 }
 
-.main-title {
-  margin-top: 0;
-  padding-top: 30px;
-  font-size: 40px;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-weight: bold;
-  color: #ef4444;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+/*-----MENU INFORMATION-----*/
+
+/*-----BOX SECOND PART-----*/
+
+.box_second_part {
+  margin-top: 200px;
+  background-color: #1f2937cc;
+  width: 100%;
+  height: 450px;
 }
+
+/*-----BOX SECOND PART-----*/
+
+/*-----FOOTER-----*/
